@@ -1,0 +1,16 @@
+version: "3"
+services:
+  db:
+    container_name: se_postgres
+    image: postgres
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+  
+volumes:
+  static:
+  media:
+  pgdata:
