@@ -1,2 +1,9 @@
 # serenade-lg.com
-this project is fashion site
+
+## This project is fashion site
+
+## Project Detail
+### Docker
+### Nuxt.js
+### Django
+### Vuetify
