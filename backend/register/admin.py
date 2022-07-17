@@ -1,4 +1,3 @@
-import imp
 from django.contrib import admin
 from register.models import User,Customer,Address
 

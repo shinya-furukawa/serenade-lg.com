@@ -24,7 +24,7 @@ class Customer(models.Model):
     email = models.EmailField('メールアドレス' , max_length=255, unique=True)
     password = models.CharField('パスワード', max_length=255)
     phone = models.CharField('電話番号' , max_length=20, null=True)
-    address = models.OneToOneField(Address, on_delete=models.CASCADE, null=True, verbose_name="住所")
+    address = models.OneToOneField(Address, on_delete=models.SET_NULL, null=True, verbose_name="住所")
     age = models.IntegerField('年齢',null=True)
     gender = models.SmallIntegerField('性別', choices=[(0,"その他"),(1,"女性"),(2,"男性")], default=0)
     is_acrive = models.BooleanField('有効',default=False)

@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'admin_interface',
     'colorfield',
     'register.apps.RegisterConfig',
+    'fashionItem.apps.FashionItemConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -54,7 +55,9 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'djoser',
     'django.forms',
-    'django_extensions'
+    'django_extensions',
+    'cloudinary',
+    'cloudinary_storage'
 ]
 
 REST_FRAMEWORK = {
@@ -176,6 +179,13 @@ STATIC_ROOT = BASE_DIR / 'static_root'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')  # BASE_DIR / 'media_root'
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': os.environ.get('CLOUDINARY_NAME'),
+    'API_KEY': os.environ.get('CLOUDINARY_API_KEY'),
+    'API_SECRET': os.environ.get('CLOUDINARY_API_SECRET')
+}
 
 AUTH_USER_MODEL = 'register.User'
 

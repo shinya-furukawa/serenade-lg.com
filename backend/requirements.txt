@@ -10,3 +10,6 @@ django-sendgrid-v5~=1.1.1
 tweepy
 djoser
 django-extensions
+cloudinary
+django-cloudinary-storage
+Pillow~=8.4.0
