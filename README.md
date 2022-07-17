@@ -7,3 +7,4 @@
 ### Nuxt.js
 ### Django
 ### Vuetify
+### PostgreSQL
